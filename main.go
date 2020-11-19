@@ -10,7 +10,6 @@ import (
 )
 
 //ref: http://www.adamretter.org.uk/blog/entries/active-directory-ldap-users-primary-group.xml
-//testdata: https://gist.github.com/micahyoung/7df87d480fd6b1a4cbdcbcbd6ad99324
 //mscorlib: https://github.com/microsoft/referencesource/blob/master/mscorlib/system/security/accesscontrol/securitydescriptor.cs
 
 func main() {
