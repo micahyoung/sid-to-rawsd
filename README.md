@@ -12,7 +12,15 @@ $sddl = (ConvertFrom-SddlString $sddlValue)
 $sddlBytes = [byte[]]::New($sddl.RawDescriptor.BinaryLength)
 $sddl.RawDescriptor.GetBinaryForm($sddlBytes, 0)
 [Convert]::ToBase64String($sddlBytes)
+# Output: AQAAgBQAAAAkAAAAAAAAAAAAAAABAgAAAAAABSAAAAAgAgAAAQIAAAAAAAUgAAAAIAIAAA==
 ```
+
+## Usage
+```
+go run main.go S-1-5-32-544 S-1-5-32-544
+# Output: AQAAgBQAAAAkAAAAAAAAAAAAAAABAgAAAAAABSAAAAAgAgAAAQIAAAAAAAUgAAAAIAIAAA==
+```
+
 ## References:
 
 * http://www.adamretter.org.uk/blog/entries/active-directory-ldap-users-primary-group.xml
