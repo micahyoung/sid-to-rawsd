@@ -22,12 +22,9 @@ go run main.go S-1-5-32-544 S-1-5-32-544
 ```
 
 ## References:
-
-* http://www.adamretter.org.uk/blog/entries/active-directory-ldap-users-primary-group.xml
+* https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/7d4dac05-9cef-4563-a058-f108abecce1d
 * https://github.com/microsoft/referencesource/blob/master/mscorlib/system/security/accesscontrol/securitydescriptor.cs
-
-
-
+* http://www.adamretter.org.uk/blog/entries/active-directory-ldap-users-primary-group.xml
 
 ## Testdata
 ```
