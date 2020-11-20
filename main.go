@@ -9,9 +9,6 @@ import (
 	"strings"
 )
 
-//ref: http://www.adamretter.org.uk/blog/entries/active-directory-ldap-users-primary-group.xml
-//mscorlib: https://github.com/microsoft/referencesource/blob/master/mscorlib/system/security/accesscontrol/securitydescriptor.cs
-
 func main() {
 	ownerSidStr := os.Args[1]
 	groupSidStr := os.Args[2]
