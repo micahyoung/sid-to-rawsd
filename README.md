@@ -1,6 +1,6 @@
 # SID to rawsd
 
-Demonstrates converting an SID into security descriptor suitable for tar.PAXRecords["MSWINDOWS.rawsd"] in [Windows OCI image layers](https://github.com/opencontainers/image-spec/blob/master/layer.md#:~:text=MSWINDOWS.rawsd).
+Demonstrates converting an SID into security descriptor suitable for tar.PAXRecords["MSWINDOWS.rawsd"] in [Windows OCI image layers](https://github.com/opencontainers/image-spec/blob/master/layer.md#:~:text=MSWINDOWS.rawsd), without Windows sycalls.
 
 Generated rawsd is equivalent to the SDDL `O:<SID>G:<SID>` 
 
