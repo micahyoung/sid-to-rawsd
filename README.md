@@ -17,7 +17,7 @@ $sddl.RawDescriptor.GetBinaryForm($sddlBytes, 0)
 
 ## Usage
 ```
-go run main.go S-1-5-32-544 S-1-5-32-544
+go run main.go -owner-sid S-1-5-32-544 -group-sid S-1-5-32-544
 # Output: AQAAgBQAAAAkAAAAAAAAAAAAAAABAgAAAAAABSAAAAAgAgAAAQIAAAAAAAUgAAAAIAIAAA==
 ```
 
