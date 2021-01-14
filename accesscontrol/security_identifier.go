@@ -6,6 +6,13 @@ import (
 	"strings"
 )
 
+// https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/f992ad60-0fe4-4b87-9fed-beb478836861
+type SID struct {
+	revision          byte
+	subAuthorityCount uint8
+	authority         uint32
+	subAuthorities    []uint32
+}
 
 func StringToSid(sidStr string) (*SID, error) {
 	sid := &SID{
@@ -32,14 +39,6 @@ func StringToSid(sidStr string) (*SID, error) {
 	}
 
 	return sid, nil
-}
-
-// https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/f992ad60-0fe4-4b87-9fed-beb478836861
-type SID struct {
-	revision          byte
-	subAuthorityCount uint8
-	authority         uint32
-	subAuthorities    []uint32
 }
 
 func (s *SID) Bytes() []byte {

@@ -5,6 +5,18 @@ import (
 	"fmt"
 )
 
+// Data structure: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/7d4dac05-9cef-4563-a058-f108abecce1d
+// Windows native implementation: https://github.com/microsoft/referencesource/blob/master/mscorlib/system/security/accesscontrol/securitydescriptor.cs
+type SECURITY_DESCRIPTOR struct {
+	revision uint8
+	sbz1     byte
+	control  uint16
+	owner    *SID
+	group    *SID
+	sacl     *ACL
+	dacl     *ACL
+}
+
 func NewSecurityDescriptor() *SECURITY_DESCRIPTOR {
 	return &SECURITY_DESCRIPTOR{
 		revision: 0x1,
@@ -15,18 +27,6 @@ func NewSecurityDescriptor() *SECURITY_DESCRIPTOR {
 		sacl:     nil,
 		dacl:     nil,
 	}
-}
-
-// Data structure: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/7d4dac05-9cef-4563-a058-f108abecce1d
-// Windows implementation: https://github.com/microsoft/referencesource/blob/master/mscorlib/system/security/accesscontrol/securitydescriptor.cs
-type SECURITY_DESCRIPTOR struct {
-	revision uint8
-	sbz1     byte
-	control  uint16
-	owner    *SID
-	group    *SID
-	sacl     *ACL
-	dacl     *ACL
 }
 
 func (sd *SECURITY_DESCRIPTOR) SetOwner(sid *SID) {
